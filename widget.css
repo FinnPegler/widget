@@ -1,7 +1,6 @@
 html {
   --widorange: #ff7f27;
   --widhover: #f04a24;
-  font-family: 'open sans';
 }
 
 .hidden {
@@ -26,6 +25,13 @@ html {
     font-weight: bold;
   }
 
+  @media only screen and (max-width: 700px) {
+    #element1 {
+      display: none;
+    }
+
+  }
+
   #heading {
       top: 5%;
       left: 5%;
@@ -36,7 +42,6 @@ html {
       align-items: center;
       font-weight: bold;
       width: 100%;
-      border: solid 1px black;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       justify-content: space-between;
@@ -60,23 +65,32 @@ html {
   }
 
   #star {
-    font-size: 150%;
-    margin: 8px 5px 8px 0px;
+    font-size: 180%;
+    margin: 2px 5px 8px 5px;
   }
 
   #element2 {
     flex-direction: column;
-    max-width: 280px;
-    border: solid 1px black;
+    max-width: 310px;
     border-radius: 10px;
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+  }
+
+  #reviews {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 460px;
   }
 
   #reviews div {
     width: 100%;
-    border: solid 1px black;
+    border: 1px solid #E1E1E1;
   }
 
   .review {
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr 3fr 3fr;
     grid-template-rows: 1fr auto auto;
@@ -92,7 +106,8 @@ html {
 
 .name {
   grid-area: 1/2/2/3;
-  margin: 0;
+  margin: 2px 0px 0px 0px;
+  color: #545454;
 }
 
 .company {
@@ -107,24 +122,64 @@ html {
 .rating {
   grid-area: 2/2/3/3;
   margin: 0;
+  font-size: 26px;
 }
+
+.bluestar {
+  color: #3b5998; 
+}
+
+.orangestar {
+  color: #F27803; 
+}
+
+.redstar {
+  color: #c41200; 
+  margin-top: -5px;
+}
+
 
 .para {
   grid-area: 3/2/4/4;
-  font-size: 13px;
+  font-size: 12px;
+  padding-right: 5px;
+  color: #545454;
+  margin: 0px 0px;
 }
 
   #schedule {
     width: 100%;
-    height: 30px;
-    border: solid 1px blue;
+    height: 60px;
+    border-top: 1px solid #E1E1E1;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
 #minimise {
   margin-left: 70px;
-  padding: 0 5px;
+  font-size: 110%;
 }
 
 #close {
-  padding: 0 5px;
+  padding: 0 7px;
+  font-size: 120%;
+}
+
+#bookbutton {
+  display: block;
+  width: 95%;
+  height: 80%;
+  margin: auto;
+  margin-top: 2%;
+  color: white;
+  background-color: var(--widorange);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+#bookbutton p {
+  text-align: center;
+  line-height: 40px;
+  margin: 0px 0px;
 }
